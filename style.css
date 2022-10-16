@@ -1,0 +1,115 @@
+:root {
+  /* Colors */
+  --clr-primary: hsl(193, 38%, 86%);
+  --clr-secondary: hsl(150, 100%, 66%);
+  --clr-greyblue: hsl(217, 19%, 38%);
+  --clr-greyblue-dark: hsl(217, 19%, 24%);
+  --clr-darkblue: hsl(218, 23%, 16%);
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Manrope', sans-serif;
+  font-size: 2rem;
+}
+
+img {
+  width: 100%;
+  padding: 1.5em 0.3em;
+}
+
+@media (max-width: 450px) {
+  img {
+    width: 135%;
+  }
+}
+
+.main {
+  background-color: var(--clr-darkblue);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  background-color: var(--clr-greyblue-dark);
+  width: 45%;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 2em 3em;
+}
+
+@media (max-width: 750px) {
+  .container {
+    width: 85%;
+  }
+}
+
+.advice--id {
+  color: var(--clr-secondary);
+  font-size: 1.2rem;
+  letter-spacing: 0.3rem;
+  text-transform: uppercase;
+  padding: 1em;
+  margin-bottom: 2.5em;
+}
+
+.advice--text {
+  color: var(--clr-primary);
+  font-size: 2.8rem;
+  font-weight: 800;
+  text-align: center;
+  letter-spacing: 1px;
+  line-height: 1.2;
+}
+
+.dice--container {
+  padding: 1em;
+  border-radius: 4rem;
+  background-color: var(--clr-secondary);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 90%;
+}
+
+.dice {
+  background-image: url('./images/icon-dice.svg');
+  background-size: cover;
+  background-color: var(--clr-secondary);
+  border: none;
+  cursor: pointer;
+  padding: 0.7em;
+}
+
+.dice--container:hover {
+  color: var(--clr-secondary);
+  box-shadow: 0px 0px 20px 1px var(--clr-secondary);
+}
+
+/* .divider {
+  background-image: url('./images/pattern-divider-desktop.svg');
+  background-size: cover;
+  width: 50%;
+  height: 50px;
+  z-index: 1;
+} */
